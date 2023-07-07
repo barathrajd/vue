@@ -2,12 +2,13 @@ const app = Vue.createApp({
   data() {
     return {
       courseGoal: [2, 1].sort(),
+      courseGoalA: '<h1>Hello</h1>',
       vueLink: 'https://vuejs.org/',
     };
   },
   methods: {
     outputGoal() {
-      alert('asdf');
+      return this.courseGoalA;
     },
   },
 });
