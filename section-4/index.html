@@ -12,7 +12,9 @@
     <section id="events">
       <h2>Eventsin Action</h2>
       <button v-on:click="increment">Add</button>
+      <button v-on:click="incrementDynamic(5)">Add 5</button>
       <button v-on:click="decrement">Remove</button>
+      <button v-on:click="decrementDynamic(5)">Remove 5</button>
       <p>Results: {{ counter }}</p>
     </section>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

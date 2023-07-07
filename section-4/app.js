@@ -11,6 +11,12 @@ const app = Vue.createApp({
     decrement() {
       this.counter--;
     },
+    incrementDynamic(num) {
+      this.counter = this.counter + num;
+    },
+    decrementDynamic(num) {
+      this.counter = this.counter - num;
+    },
   },
 });
 
