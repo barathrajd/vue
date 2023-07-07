@@ -5,6 +5,11 @@ const app = Vue.createApp({
       vueLink: 'https://vuejs.org/',
     };
   },
+  methods: {
+    outputGoal() {
+      alert('asdf');
+    },
+  },
 });
 
 app.mount('#user-goal');
