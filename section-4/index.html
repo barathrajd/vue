@@ -16,7 +16,7 @@
       <button v-on:click="decrement">Remove</button>
       <button v-on:click="decrementDynamic(5)">Remove 5</button>
       <p>Results: {{ counter }}</p>
-      <input type="text" v-on:input="setName" />
+      <input type="text" v-on:input="setName($event, 'Hi')" />
       <p>Your Name: {{ name }}</p>
     </section>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

@@ -18,8 +18,8 @@ const app = Vue.createApp({
     decrementDynamic(num) {
       this.counter = this.counter - num;
     },
-    setName(e) {
-      this.name = e.target.value;
+    setName(e, welecome) {
+      this.name = welecome + ' ' + e.target.value;
     },
   },
 });
