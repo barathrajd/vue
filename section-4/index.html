@@ -11,10 +11,10 @@
     </header>
     <section id="events">
       <h2>Eventsin Action</h2>
-      <button v-on:click="increment">Add</button>
-      <button v-on:click="incrementDynamic(5)">Add 5</button>
-      <button v-on:click="decrement">Remove</button>
-      <button v-on:click="decrementDynamic(5)">Remove 5</button>
+      <button @click="increment">Add</button>
+      <button @click="incrementDynamic(5)">Add 5</button>
+      <button @click="decrement">Remove</button>
+      <button @click="decrementDynamic(5)">Remove 5</button>
       <p v-once>Starting Counter: {{counter}}</p>
       <p>Results: {{ counter }}</p>
       <!-- <input
@@ -25,7 +25,7 @@
       /> -->
       <input type="text" v-model="name" />
       <input type="text" v-model="lastName" />
-      <button v-on:click="resetInput">Reset Input</button>
+      <button @click="resetInput">Reset Input</button>
       <p>Your Full Name: {{ fullname }}</p>
       <!-- Computed Property-->
       <!--Once run when the value of fullname function return new <p>Your Name: {{ fullname }}</p> -->
