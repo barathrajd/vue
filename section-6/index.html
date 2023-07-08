@@ -20,11 +20,13 @@
       <h2>My course goals</h2>
       <input type="text" v-model="enteredGoal" />
       <button @click="addGoal">Add Goal</button>
-      <p v-if="goals.length === 0">
+      <p v-show="goals.length === 0">
         No goals have been added yet - please start adding some!
       </p>
-      <p v-else-if="goals.length + 1 <= 5">Goal No. : {{goals.length}}</p>
-      <p v-else>Max Goal Added</p>
+      <p v-show="goals.length > 0 && goals.length < 5">
+        Goal No. : {{goals.length}}
+      </p>
+      <p v-show="goals.length === 5">Max Goal Added</p>
       <ul>
         <li v-for="goal in goals">{{goal}}</li>
       </ul>
