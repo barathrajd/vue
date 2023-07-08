@@ -17,16 +17,19 @@
       <button v-on:click="decrementDynamic(5)">Remove 5</button>
       <p v-once>Starting Counter: {{counter}}</p>
       <p>Results: {{ counter }}</p>
-      <input
+      <!-- <input
         type="text"
+        v-bind:value="name"
         v-on:input="setName($event, 'Hi')"
-        v-on:keyup.enter="confirmInput"
-      />
+        v-on:keyup="confirmInput"
+      /> -->
+      <input type="text" v-model="name" />
+      <button v-on:click="resetInput">Reset Input</button>
       <p>Your Name: {{ confirmedName }}</p>
-      <form v-on:submit.prevent="submitForm">
+      <!-- <form v-on:submit.prevent="submitForm">
         <input type="text" />
         <button>Sign up</button>
-      </form>
+      </form> -->
     </section>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
