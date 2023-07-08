@@ -11,10 +11,11 @@
     </header>
     <section id="events">
       <h2>Eventsin Action</h2>
-      <button v-on:click.right="increment">Add</button>
+      <button v-on:click="increment">Add</button>
       <button v-on:click="incrementDynamic(5)">Add 5</button>
-      <button v-on:click.left="decrement">Remove</button>
+      <button v-on:click="decrement">Remove</button>
       <button v-on:click="decrementDynamic(5)">Remove 5</button>
+      <p v-once>Starting Counter: {{counter}}</p>
       <p>Results: {{ counter }}</p>
       <input
         type="text"
