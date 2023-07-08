@@ -6,7 +6,23 @@ const app = Vue.createApp({
       confirmedName: '',
     };
   },
+  computed: {
+    fullname() {
+      console.log('Computed Running....');
+      if (this.name === '') {
+        return '';
+      }
+      return this.name + ' ' + 'test';
+    },
+  },
   methods: {
+    outputFullName() {
+      console.log('Running....');
+      if (this.name === '') {
+        return '';
+      }
+      return this.name + ' ' + 'test';
+    },
     increment() {
       this.counter++;
     },
@@ -19,7 +35,7 @@ const app = Vue.createApp({
     decrementDynamic(num) {
       this.counter = this.counter - num;
     },
-    setName(e, welecome) {
+    setName(e) {
       this.name = e.target.value;
     },
     submitForm() {
