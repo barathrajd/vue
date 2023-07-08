@@ -4,15 +4,39 @@ const app = Vue.createApp({
       counter: 0,
       name: '',
       confirmedName: '',
+      lastName: '',
     };
+  },
+  // To watch any function
+  watch: {
+    counter() {
+      console.log(this.counter);
+      if (this.counter >= 50) {
+        this.counter = 0;
+      }
+    },
+    // name(value) {
+    //   if (value === '') {
+    //     this.fullname = '';
+    //   } else {
+    //     this.fullname = value + ' ' + this.lastName;
+    //   }
+    // },
+    // lastName(value) {
+    //   if (value === '') {
+    //     this.fullname = '';
+    //   } else {
+    //     this.fullname = this.name + ' ' + value;
+    //   }
+    // },
   },
   computed: {
     fullname() {
       console.log('Computed Running....');
-      if (this.name === '') {
+      if (this.name === '' || this.lastName === '') {
         return '';
       }
-      return this.name + ' ' + 'test';
+      return this.name + ' ' + this.lastName;
     },
   },
   methods: {

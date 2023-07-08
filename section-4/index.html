@@ -24,8 +24,9 @@
         v-on:keyup="confirmInput"
       /> -->
       <input type="text" v-model="name" />
+      <input type="text" v-model="lastName" />
       <button v-on:click="resetInput">Reset Input</button>
-      <p>Your Name: {{ fullname }}</p>
+      <p>Your Full Name: {{ fullname }}</p>
       <!-- Computed Property-->
       <!--Once run when the value of fullname function return new <p>Your Name: {{ fullname }}</p> -->
       <!--Re-run again of value changes <p>Your Name: {{ outputFullName() }}</p> -->
