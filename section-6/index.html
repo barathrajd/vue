@@ -28,8 +28,13 @@
       </p> -->
       <!-- <p v-show="goals.length === 5">Max Goal Added</p> -->
       <ul>
-        <li v-for="(goal,index) in goals" @click="removeGoal(index)">
+        <li
+          v-for="(goal,index) in goals"
+          :key="goal"
+          @click="removeGoal(index)"
+        >
           {{goal}} - {{index}}
+          <input type="text" @click.stop />
         </li>
       </ul>
       <!-- <ul>
