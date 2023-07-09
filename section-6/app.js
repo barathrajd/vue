@@ -10,6 +10,9 @@ const app = Vue.createApp({
       this.goals.push(this.enteredGoal);
       this.enteredGoal = '';
     },
+    removeGoal(num) {
+      this.goals.splice(num, 1);
+    },
   },
 });
 

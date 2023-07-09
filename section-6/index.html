@@ -23,12 +23,14 @@
       <p v-show="goals.length === 0">
         No goals have been added yet - please start adding some!
       </p>
-      <p v-show="goals.length > 0 && goals.length < 5">
+      <!-- <p v-show="goals.length > 0 && goals.length < 5">
         Goal No. : {{goals.length}}
-      </p>
-      <p v-show="goals.length === 5">Max Goal Added</p>
+      </p> -->
+      <!-- <p v-show="goals.length === 5">Max Goal Added</p> -->
       <ul>
-        <li v-for="(goal,index) in goals">{{goal}} - {{index}}</li>
+        <li v-for="(goal,index) in goals" @click="removeGoal(index)">
+          {{goal}} - {{index}}
+        </li>
       </ul>
       <!-- <ul>
         <li v-for="num in 10">{{num}}</li>
