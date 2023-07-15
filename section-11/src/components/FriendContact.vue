@@ -12,9 +12,22 @@
 
 <script>
 export default {
-  props: ['name', 'phoneNumber', 'emailAddress', 'isFavorite'],
+  // props: ['name', 'phoneNumber', 'emailAddress', 'isFavorite'],
+  props: {
+    name: { type: String, required: true },
+    phoneNumber: { type: String, required: true },
+    emailAddress: { type: String, required: true },
+    isFavorite: {
+      type: String,
+      required: false,
+      default: '0',
+      validator: function (value) {
+        return value === '0' || value === '1'
+      }
+    }
+  },
   data() {
-    console.log(this.isFavorite)
+    // console.log(this.isFavorite)
     return {
       detailsAreVisible: false,
       friendIsFavorite: this.isFavorite
