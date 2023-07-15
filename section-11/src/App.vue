@@ -3,8 +3,14 @@
     <header>
       <h1>My Friends</h1>
     </header>
-    <friend-contact></friend-contact>
-    <friend-contact></friend-contact>
+    <friend-contact
+      v-for="friend in friends"
+      :key="friend.id"
+      :name="friend.name"
+      :email-address="friend.email"
+      :phone-number="friend.phone"
+      :isFavorite="friend.id % 2 === 1 ? '0' : '1'"
+    ></friend-contact>
   </section>
 </template>
 
@@ -12,7 +18,20 @@
 export default {
   data() {
     return {
-      friends: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      friends: [
+        {
+          id: 1,
+          name: 'John',
+          phone: '0123 4567 890',
+          email: 'john@gmail.com'
+        },
+        {
+          id: 2,
+          name: 'Doe',
+          phone: '0123 4567 890',
+          email: 'doe@gmail.com'
+        }
+      ]
     }
   }
 }
@@ -58,6 +77,7 @@ li {
   text-align: center;
   width: 90%;
   max-width: 40rem;
+  list-style: none;
 }
 
 h2 {
