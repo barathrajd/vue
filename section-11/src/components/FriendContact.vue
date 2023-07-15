@@ -24,6 +24,17 @@ export default {
       default: false
     }
   },
+  // emits: ['toggle-favorite'],
+  emits: {
+    'toggle-favorite': function (id) {
+      if (id) {
+        return true
+      } else {
+        console.warn('id is not present')
+        return false
+      }
+    }
+  },
   data() {
     // console.log(this.isFavorite)
     return {
