@@ -9,7 +9,7 @@
       :name="friend.name"
       :email-address="friend.email"
       :phone-number="friend.phone"
-      :isFavorite="friend.id % 2 === 1 ? '0' : '1'"
+      :isFavorite="true"
     ></friend-contact>
   </section>
 </template>
