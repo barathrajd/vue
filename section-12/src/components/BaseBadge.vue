@@ -9,14 +9,14 @@ export default {
     classes() {
       return {
         'badge--admin': this.type === 'admin',
-        'badge--author': this.type === 'author',
-      };
-    },
-  },
-};
+        'badge--author': this.type === 'author'
+      }
+    }
+  }
+}
 </script>
 
-<style>
+<style scoped>
 .badge {
   display: inline-block;
   padding: 0.5rem 1rem;
